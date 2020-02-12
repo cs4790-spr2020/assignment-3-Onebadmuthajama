@@ -2,16 +2,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BlabberApp.Domain;
 using System;
 
-namespace BlabberApp.DomainTest
-{
+namespace BlabberApp.DomainTest {
     [TestClass]
-    public class BlabTest
-    {
+    public class BlabTest {
         [TestMethod]
-        public void TestGetSetMessage()
-        {
+        public void TestGetSetMessage() {
             // Arrange
-            var harness = new Blab();       
+            var harness = new Blab();
             var expected = "Hello!";
             harness.Message = expected;
             // Act
@@ -21,10 +18,9 @@ namespace BlabberApp.DomainTest
         }
 
         [TestMethod]
-        public void TestGetSetUserID()
-        {
+        public void TestGetSetUserID() {
             // Arrange
-            var harness = new Blab();       
+            var harness = new Blab();
             var expected = "UserID!";
             harness.UserID = expected;
             // Act
@@ -34,10 +30,9 @@ namespace BlabberApp.DomainTest
         }
 
         [TestMethod]
-        public void TestGetSetDateTime()
-        {
+        public void TestGetSetDateTime() {
             // Arrange
-            var harness = new Blab();       
+            var harness = new Blab();
             var expected = DateTime.UtcNow;
             harness.DateTime = expected;
             // Act

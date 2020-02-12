@@ -2,38 +2,27 @@ using System;
 using System.Collections;
 using BlabberApp.Domain;
 
-namespace BlabberApp.DataStore
-{
-    public class InMemory : IDataStore
-    {
+namespace BlabberApp.DataStore {
+    public class InMemory : IDataStore {
         private ArrayList _items = new ArrayList();
-        public bool Create(IDatum datum)
-        {
+        public bool Create(IDatum datum) {
             var idx = this._items.Add(datum);
-            if (idx < 0)
-            {
+            if (idx < 0) {
                 throw new ArgumentOutOfRangeException("Can't contain negitive objects");
             }
             return true;
         }
-        public IDatum Read(int idx)
-        {
-            return this._items[idx];
+        public IDatum Read(int idx) {
+            return (IDatum) this._items[idx];
         }
-        public bool Update(IDatum datum)
-        {
+        public bool Update(IDatum datum) {
             return true;
         }
-        public bool Delete(int idx)
-        {
-            try
-            {
+        public bool Delete(int idx) {
+            try {
                 this._items.RemoveAt(idx);
 
-            }
-            catch (ArgumentOutOfRangeException e)
-            {
-                Console.WriteLine(e.Message());
+            } catch (ArgumentOutOfRangeException e) {
                 throw e;
             }
             return true;

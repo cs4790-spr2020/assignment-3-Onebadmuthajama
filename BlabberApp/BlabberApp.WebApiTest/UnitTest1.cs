@@ -1,13 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace BlabberApp.WebApiTest
-{
+namespace BlabberApp.WebApiTest {
     [TestClass]
-    public class UnitTest1
-    {
+    public class UnitTest1 {
         [TestMethod]
-        public void TestMethod1()
-        {
+        public void TestMethod1() {
         }
     }
 }

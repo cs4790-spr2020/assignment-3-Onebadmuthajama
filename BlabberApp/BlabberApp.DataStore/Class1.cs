@@ -1,8 +1,6 @@
 ﻿using System;
 
-namespace BlabberApp.DataStore
-{
-    public class Class1
-    {
+namespace BlabberApp.DataStore {
+    public class Class1 {
     }
 }

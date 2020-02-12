@@ -1,11 +1,8 @@
 ﻿using System;
 
-namespace BlabberApp.Console
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace BlabberApp.Console {
+    class Program {
+        static void Main(string[] args) {
             System.Console.WriteLine("Hello World!");
         }
     }

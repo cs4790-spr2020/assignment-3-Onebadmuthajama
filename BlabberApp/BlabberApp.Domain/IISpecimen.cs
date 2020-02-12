@@ -1,6 +1,5 @@
 namespace BlabberApp.Domain {
-    public interface ISpecimen
-    {
-        
+    public interface ISpecimen {
+
     }
 }

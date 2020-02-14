@@ -1,6 +1,6 @@
 using System;
 using System.Collections;
-using BlabberApp.Domain;
+using BlabberApp.Domain.Interfaces;
 
 namespace BlabberApp.DataStore {
     public class InMemory : IDataStore {

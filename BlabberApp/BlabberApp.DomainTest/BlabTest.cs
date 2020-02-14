@@ -1,10 +1,11 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using BlabberApp.Domain;
+using BlabberApp.Domain.Models;
 using System;
 
 namespace BlabberApp.DomainTest {
     [TestClass]
     public class BlabTest {
+        // getset tests should never fail.  period.
         [TestMethod]
         public void TestGetSetMessage() {
             // Arrange
@@ -37,6 +38,18 @@ namespace BlabberApp.DomainTest {
             harness.DateTime = expected;
             // Act
             var actual = harness.DateTime;
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TestGetSetID() {
+            // Arrange
+            var harness = new Blab();
+            var expected = 1;
+            harness.Id = expected;
+            // Act
+            var actual = harness.Id;
             // Assert
             Assert.AreEqual(expected, actual);
         }

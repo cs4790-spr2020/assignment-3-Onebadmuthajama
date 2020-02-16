@@ -22,22 +22,22 @@ namespace BlabberApp.DomainTest {
         public void TestGetSetUserID() {
             // Arrange
             var harness = new Blab();
-            var expected = "UserID!";
-            harness.UserID = expected;
+            var expected = 1;
+            harness.UserId = expected;
             // Act
-            var actual = harness.UserID;
+            var actual = harness.UserId;
             // Assert
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void TestGetSetDateTime() {
+        public void TestGetSetCreatedDate() {
             // Arrange
             var harness = new Blab();
             var expected = DateTime.UtcNow;
-            harness.DateTime = expected;
+            harness.CreatedDate = expected;
             // Act
-            var actual = harness.DateTime;
+            var actual = harness.CreatedDate;
             // Assert
             Assert.AreEqual(expected, actual);
         }
@@ -51,7 +51,7 @@ namespace BlabberApp.DomainTest {
             // Act
             var actual = harness.Id;
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.Fail();
         }
     }
 }
